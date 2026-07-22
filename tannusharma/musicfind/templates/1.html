@@ -1,0 +1,50 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method="GET">
+  <h1> Welcome </h1>
+  <h2> Let's search your Music </h2>
+    <input id="song" name="song" class="input" type="text" placeholder=" "/>
+    <label for="song"> Song </label>
+    <input id="artist" name="artist" type="text" placeholder=" "/>
+    <label for="artist"> Artist </label>
+    <input id="year" name="year" type="text" placeholder=" "/>
+    <label for="year"> Year </label>
+    <input id="album" name="album" type="text" placeholder=" "/>
+    <label for="album"> Album </label>
+    <button type="submit"> Submit </button>
+</form>
+<table border="1" cellpadding="10">
+    <tr>
+        <td>Song</td>
+        <td>Artist</td>
+        <td>Year</td>
+        <td>Album</td>
+    </tr>
+    {% for i in music %}
+    <tr>
+        <td>
+            {{i.song}}
+
+        </td>
+        <td>
+            {{i.artist}}
+            
+        </td>
+        <td>
+            {{i.year}}
+            
+        </td>
+        <td>
+            {{i.album}}
+            
+        </td>
+    </tr>
+
+
+    {% endfor %}
+</table>
+    </body>
+</html>

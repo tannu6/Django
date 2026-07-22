@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Search</title>
+</head>
+<body>
+
+<h1>Home Page</h1>
+
+<form method="GET">
+    <label>Title</label><br>
+    <input type="text" name="title"><br><br>
+
+    <label>Year</label><br>
+    <input type="text" name="year"><br><br>
+
+    <label>Director</label><br>
+    <input type="text" name="director"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<br><br>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Director</th>
+        <th>Description</th>
+    </tr>
+
+    {% for m in movies %}
+    <tr>
+        <td>{{ m.title }}</td>
+        <td>{{ m.year }}</td>
+        <td>{{ m.director }}</td>
+        <td>{{ m.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
